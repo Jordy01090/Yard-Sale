@@ -59,23 +59,16 @@
             font-weight: bold;
             margin-bottom: 4px;
         }
-        .input{
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
+        .value{
+            color: var(--very-light-pink);
             font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
+            margin: 8px 0 32px 0;
         }
-        .input-name, .input-email, .input-password{
-            margin-bottom: 22px
-        } 
-        .primary-button{
-            background-color: var(--hospital-green);
+        .secondary-button{
+            background-color: var(--white);
             border-radius: 8px;
-            border: none;
-            color: var(--white);
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
             width: 100%;
             height: 50px;
             cursor: pointer;
@@ -108,19 +101,19 @@
                     <label for = "name" class="label">
                         Name
                     </label>
-                    <input type="text" id="name" placeholder="Teff" class="input input-name">
+                    <p class="value">Camila Yokoo</p>
     
                     <label for = "email" class="label">
                         Email
                     </label>
-                    <input type="text" id="email" placeholder="platzi@example.com" class="input input-email">
+                    <p class="value">camilayokoo@gmail.com</p>
     
                     <label for = "new-password" class="label">
                         Password
                     </label>
-                    <input type="password" id="new-password" placeholder="********" class="input input-password"> 
+                    <p class="value">********</p>
                 </div>
-                <input type="submit" value="Create" class="primary-button login-button" >
+                <input type="submit" value="Edit" class="secondary-button login-button" >
             </form>
         </div>    
     </div>
