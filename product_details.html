@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./logos/favicon_bota_fora.svg" type="img">
+    <style>
+        :root {
+            --black:#000000;
+            --white: #FFFFFF;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --dark: #232830;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .product-details{
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+        .product-details-close{
+            background: var(--white);
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            padding: 12px;
+            border-radius: 50%;
+        }
+        .product-details-close:hover{
+            cursor: pointer;
+        }
+        .product-details > img:nth-child(2){
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+        .product-info{
+            margin: 24px 24px 0 24px;
+
+        }
+        .product-info p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        } 
+        .product-info p:nth-child(2){
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 36px;
+        } 
+        .product-info p:nth-child(3){
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 36px;
+        } 
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .add-to-cart-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .points {
+        display: flex;
+        justify-content: center;
+        }
+        .points > li {
+            background: var(--very-light-pink);
+            width: 8px;
+            height: 8px;
+            margin: 8px 6px;
+            border-radius: 50%;
+            list-style-type: none;
+            cursor: pointer;
+        }
+        .points > .active {
+            background: var(--hospital-green);
+        }
+        .points > li:hover {
+            background: var(--hospital-green);
+        }
+        @media (max-width: 640px) {
+            .product-details{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-details"><!--para contenedores aside-->
+        <div class="product-details-close">
+            <img src="./icons/icon_close.png" alt="close">
+        </div>
+        
+        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+        <div class="points">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </div>
+        <div class="product-info">
+            <p>$35,00</p>
+            <p>Bike</p>
+            <p>With its practical position, this bike also fulfills a descorative function, add your hall or workspace</p>
+            <button class="primary-button add-to-cart-button">
+                <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+                Add to cart
+            </button>
+        </div>
+    </aside>
+</body>
+</html>
