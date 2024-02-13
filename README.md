@@ -15,10 +15,10 @@ This is a design layout for an online store that i did applying my knowledge in 
 ## Overview
 This is one of the proyect that i did for platzi, is a design for an online store where i put all my effort for create it in based on my experience, i hope learn more of proyects like this one.
 
-### Screenshot
+### Screenshots
 
-![](./images/home.png)
 ![](./images/navbar.png)
+![](./images/home.png)
 ![](./images/password.png)
 ![](./images/product.png)
 
