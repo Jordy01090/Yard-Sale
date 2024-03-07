@@ -123,11 +123,14 @@ nav{
 /* Menu para mobile */
 
 .mobile-menu{
+    background-color: var(--white);
     position: absolute;
     top: 60px;
     /*display: flex;
     flex-direction: column;
     justify-content: space-between; */
+    left: 0;
+    width: 100%;
     height: 92vh;
     padding: 24px;
 
@@ -159,7 +162,7 @@ nav{
 }
 
 /* Carrito de compras  */
-.product-details{
+.product-details-sc{
     background-color: var(--white);
     width: 360px;
     padding: 0 24px;
@@ -237,7 +240,7 @@ nav{
 
 /* Products view */
 .cards-container{
-    margin-top: 20px;
+    padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);/*primer parametro columnas, segundo parametro tamaño*/
     gap: 26px;/*hace un espacio entre elemento*/
@@ -252,32 +255,116 @@ nav{
     border-radius: 20px;
     object-fit: cover;/*para que la imagen no pierda su forma original y no se deforme*/
 }
-.product-info{
+.product-card .product-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 12px
 }
-.product-info div p:nth-child(1){
+.product-card .product-info div p:nth-child(1){
     font-weight: bold;
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 4px;
 }
-.product-info div p:nth-child(2){
+.product-card .product-info div p:nth-child(2){
     font-size: var(--sm);
     margin-top: 0;
     margin-bottom: 0;
     color: var(--very-light-pink);
 }
-.product-info figure{
+.product-card .product-info figure{
     margin: 0;
 }
-.product-info figure img{
+.product-card .product-info figure img{
     width: 35px;
     height: 35px;
 }
 
+/* Product Details */
+.product-details{
+    width: 360px;
+    padding-bottom: 24px;
+    position: absolute;
+    right: 0;
+}
+.product-details-close{
+    background: var(--white);
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 12px;
+    border-radius: 50%;
+}
+.product-details-close:hover{
+    cursor: pointer;
+}
+.product-details > img:nth-child(2){
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+}
+.product-details .product-info{
+    margin: 24px 24px 0 24px;
+
+}
+.product-details .product-info p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+} 
+.product-details .product-info p:nth-child(2){
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 36px;
+} 
+.product-details .product-info p:nth-child(3){
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 36px;
+} 
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+}
+.add-to-cart-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.points {
+display: flex;
+justify-content: center;
+}
+.points > li {
+    background: var(--very-light-pink);
+    width: 8px;
+    height: 8px;
+    margin: 8px 6px;
+    border-radius: 50%;
+    list-style-type: none;
+    cursor: pointer;
+}
+.points > .active {
+    background: var(--hospital-green);
+}
+.points > li:hover {
+    background: var(--hospital-green);
+}
+    
 @media (max-width: 640px) {
     .menu{
         display: block;
@@ -292,7 +379,7 @@ nav{
     .desktop-menu{
         display: none;
     }
-    .product-details{
+    .product-details-sc{
         width: 100%;
     }
 
@@ -306,6 +393,10 @@ nav{
     .product-card img{
         width: 140px;
         height:140px;
+    }
+
+    .product-details{
+        width: 100%;
     }
 }
 @media (min-width: 641px) {

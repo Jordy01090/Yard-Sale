@@ -22,7 +22,7 @@ function toogleMobileMenu(){
 
 // CONECTING CART ICON WITH SHOPPING CART ASSIDE
 const menuCartIcon = document.querySelector('.navbar-shopping-cart');
-const shopCartAsside = document.querySelector('.product-details')
+const shopCartAsside = document.querySelector('.product-details-sc')
 
 menuCartIcon.addEventListener('click', toogleCarritoMenu )
 
@@ -80,4 +80,6 @@ for (product of productList){
     
     contenedor.append(productCart);
 }
+
+// CONECTING  PRODUCT LIST WITH PRODUCT DETAILS 
 
