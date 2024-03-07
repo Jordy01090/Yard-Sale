@@ -1,3 +1,5 @@
+.navbar.html
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
