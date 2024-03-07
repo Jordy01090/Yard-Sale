@@ -5,7 +5,8 @@ const menuDesktop = document.querySelector('.desktop-menu');
 navEmail.addEventListener("click", toogleDesktopMenu);
 
 function toogleDesktopMenu(){
-    shopCartAsside.classList.add('inactive');//in order to disapear each others
+    shopCartAside.classList.add('inactive');//in order to disapear each others
+    productDetailsAside.classList.add('inactive');
     menuDesktop.classList.toggle('inactive');
 }
 
@@ -16,21 +17,39 @@ const menuMobile = document.querySelector('.mobile-menu');
 menuMobIcon.addEventListener('click', toogleMobileMenu );
 
 function toogleMobileMenu(){
-    shopCartAsside.classList.add('inactive');
+    shopCartAside.classList.add('inactive');
+    productDetailsAside.classList.add('inactive');
     menuMobile.classList.toggle('inactive');
 }
 
-// CONECTING CART ICON WITH SHOPPING CART ASSIDE
+// CONECTING CART ICON WITH SHOPPING CART ASIDE
 const menuCartIcon = document.querySelector('.navbar-shopping-cart');
-const shopCartAsside = document.querySelector('.product-details-sc')
+const shopCartAside = document.querySelector('.product-details-sc')
 
 menuCartIcon.addEventListener('click', toogleCarritoMenu )
 
 function toogleCarritoMenu(){
     menuDesktop.classList.add('inactive');
     menuMobile.classList.add('inactive');
-    shopCartAsside.classList.toggle('inactive')
+    productDetailsAside.classList.add('inactive');
+    shopCartAside.classList.toggle('inactive');
 }
+
+// CONECTING  PRODUCT IMAGE WITH PRODUCT DETAILS ASIDE
+const productDetailsAside = document.querySelector('.product-details');
+const productDetailsIcon = document.querySelector('.product-details-close');
+
+productDetailsIcon.addEventListener('click', closeProductDetailAside)
+function openProductDetailAside(){
+    shopCartAside.classList.add('inactive');
+    menuDesktop.classList.add('inactive');
+    menuMobile.classList.add('inactive');
+    productDetailsAside.classList.remove('inactive');
+}
+function closeProductDetailAside(){
+    productDetailsAside.classList.add('inactive');
+}
+
 
 /* CREATING THE PRODUCT LIST FROM JS */
 var productList = [];
@@ -49,6 +68,11 @@ productList.push({
     price: '75.00',
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 })
+productList.push({
+    name: 'Laptop',
+    price: '40.00',
+    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+})
 
 for (product of productList){
     const contenedor = document.querySelector('.cards-container');
@@ -58,6 +82,8 @@ for (product of productList){
     
     const productImage = document.createElement('img');
     productImage.setAttribute('src', product.image);
+    // CONECTING  PRODUCT IMAGE WITH PRODUCT DETAILS ASIDE
+    productImage.addEventListener('click', openProductDetailAside)
 
     const productInfo = document.createElement('div');
     productInfo.classList.add('product-info');
@@ -81,5 +107,6 @@ for (product of productList){
     contenedor.append(productCart);
 }
 
-// CONECTING  PRODUCT LIST WITH PRODUCT DETAILS 
+
+
 

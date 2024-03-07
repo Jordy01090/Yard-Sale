@@ -254,6 +254,7 @@ nav{
     height:240px;
     border-radius: 20px;
     object-fit: cover;/*para que la imagen no pierda su forma original y no se deforme*/
+    cursor: pointer;
 }
 .product-card .product-info{
     display: flex;
@@ -283,6 +284,7 @@ nav{
 
 /* Product Details */
 .product-details{
+    background-color: var(--white);
     width: 360px;
     padding-bottom: 24px;
     position: absolute;
