@@ -34,12 +34,18 @@ function toogleCarritoMenu(){
     productDetailsAside.classList.add('inactive');
     shopCartAside.classList.toggle('inactive');
 }
+// CONECTING SHOPPING CART ASIDE WITH CLOSE ICON
+const shoppingIcon = document.querySelector('.arrow');
+shoppingIcon.addEventListener('click', closeShoppingCartAside);
+function closeShoppingCartAside(){
+    shopCartAside.classList.add('inactive');
+}
 
 // CONECTING  PRODUCT IMAGE WITH PRODUCT DETAILS ASIDE
 const productDetailsAside = document.querySelector('.product-details');
 const productDetailsIcon = document.querySelector('.product-details-close');
 
-productDetailsIcon.addEventListener('click', closeProductDetailAside)
+productDetailsIcon.addEventListener('click', closeProductDetailAside);
 function openProductDetailAside(){
     shopCartAside.classList.add('inactive');
     menuDesktop.classList.add('inactive');
@@ -53,26 +59,28 @@ function closeProductDetailAside(){
 
 /* CREATING THE PRODUCT LIST FROM JS */
 var productList = [];
-productList.push({
-    name: 'Bike',
-    price: '120.00',
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
-productList.push({
-    name: 'Computadora',
-    price: '150.00',
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
-productList.push({
-    name: 'Audifonos',
-    price: '75.00',
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
-productList.push({
-    name: 'Laptop',
-    price: '40.00',
-    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-})
+/* THIS IS JUST AN EXAMPLE OF THE GENERAL VIEW WITH MULTIPLES PRODUCTS */ 
+const productImage = 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' 
+const productPrice = '$ 35,00';
+const productName = 'Bike';
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+insertarProductos(productName, productPrice, productImage);
+
+function insertarProductos(name,price,image){
+    productList.push({
+        name: name,
+        price: price,
+        image: image
+    })
+}
 
 for (product of productList){
     const contenedor = document.querySelector('.cards-container');
