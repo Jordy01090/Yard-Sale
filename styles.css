@@ -23,6 +23,7 @@ body {
 }
 .logo{
     width: 100px;
+    cursor: pointer;
 }
 nav{
     display: flex;
@@ -82,7 +83,7 @@ nav{
     justify-content: center;
     align-items: center;
 }
-/* Menu para desktop */
+/* Menu for desktop */
 .desktop-menu{
     background-color: var(--white);
     position: absolute;
@@ -120,18 +121,14 @@ nav{
     display: inline-block;/*ahora si se puede trabajar como bloque*/
 
 }
-/* Menu para mobile */
+/* Menu for mobile */
 
 .mobile-menu{
     background-color: var(--white);
     position: absolute;
     top: 60px;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
     left: 0;
     width: 100%;
-    height: 92vh;
     padding: 24px;
 
 }
@@ -161,17 +158,19 @@ nav{
     color: var(--hospital-green);
 }
 
-/* Carrito de compras  */
+/* Shopping Cart  */
 .product-details-sc{
     background-color: var(--white);
     width: 360px;
     padding: 0 24px;
+    padding-bottom: 14px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
 }
 .title-container{
     display: flex;  
+    align-items: center;
 }
 .title-container img{
     transform: rotate(180deg); /*rota la imagen*/
@@ -225,6 +224,9 @@ nav{
 .shopping-cart p:nth-child(3){
     font-size: var(--md);
     font-weight: bold;
+}
+.arrow{
+    cursor: pointer;
 }
 .primary-button{
     background-color: var(--hospital-green);
@@ -286,6 +288,7 @@ nav{
 .product-details{
     background-color: var(--white);
     width: 360px;
+    
     padding-bottom: 24px;
     position: absolute;
     right: 0;
